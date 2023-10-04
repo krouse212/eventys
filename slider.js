@@ -2,10 +2,10 @@ $('.center').slick({
     centerMode: true,
     centerPadding: '60px',
     // center
-    // mobileFirst: true,
+    mobileFirst: true,
     autoplay: true,
     variableWidth: true,
-    speed: 1000,
+    speed: 450,
     slidesToShow: 3,
     arrows: false,
     dots: true,

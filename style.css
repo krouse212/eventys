@@ -1,22 +1,14 @@
 @font-face {
     font-family: 'Formular';
     src:
-      /* url("/fonts/formular/Formular.woff2") format("woff2"), */
+      url("/fonts/formular/Formular.woff2") format("woff2"),
       url("/fonts/formular/Formular.woff") format("woff"),
-      
+      url("/fonts/formular/Formular-Light.woff2") format("woff2"),
       url("/fonts/formular/Formular-Black.woff2") format("woff2"),
       url("/fonts/formular/Formular-Bold.woff2") format("woff2"),
-      url("/fonts/formular/Formular-Medium.woff2") format("woff2"),
-      url("/fonts/formular/Formular-Light.woff2") format("woff2"),
+      /* url("/fonts/formular/Formular-Medium.woff2") format("woff2"), */
       
   }
-  @font-face {
-    font-family: 'Formular-bold';
-    src:
-      url("/fonts/formular/Formular-Bold.woff2") format("woff2"),  
-      
-  }
- 
 
 *{
     margin: 0px;
@@ -58,13 +50,13 @@ header{
     background-color: #2C2C2D;
     /* max-width: 375px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 16px 20px;
+    padding: 20px 25px 16px 25px;
     z-index: 15;
 
     max-width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     left: 0;
     .logo{
         .logo_img{
@@ -97,12 +89,11 @@ h2{
 }
 
 .gradient_title, .title_gradient{
-    font-family: 'Formular-bold';
     background: -webkit-linear-gradient(#EDFC74, #CBABFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    /* font-weight: 800; */
+    font-weight: 800;
     /* letter-spacing: -5%; */
     line-height: 1;
 }
@@ -185,21 +176,25 @@ h3{
             font-size: 14px;
             font-weight: bold;
             border-radius: 9px;
-            width: 28px;
-            height: 28px;
+            width: 36px;
+            height: 36px;
             background: -webkit-linear-gradient(#FCFFDF, #F1FE87);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 11px;
             margin-top: 24px;
+            .icons{
+                width: 20px;
+                height: 20px;
+            }
             &::after{
                 content: "";
                 /* background-color: yellow; */
                 background: -webkit-linear-gradient(#FCFFDF, #F1FE87);
                 position: absolute;
                 left: 0;
-                width: 28px;
-                height: 28px;
+                width: 36px;
+                height: 36px;
                 border-radius: 9px;
                 opacity: 0.15;
             }
@@ -305,7 +300,7 @@ h3{
     }
     .second_img{
         position: absolute;
-        right: 0;
+        right: 25px;
         bottom: 0;
         max-height: 300px;
     }
@@ -327,6 +322,7 @@ h3{
 }
 
 .screen_4{ 
+    position: relative;
     .title_gradient{
         margin-top: 50px;
         font-size: 28px;
@@ -376,9 +372,10 @@ h3{
     padding: 40px 20px 0px 20px;
     position: relative;
     min-height: 485px;
+    overflow: hidden;
     .phone_screen{
         position: absolute;
-        right: 0;
+        right: 25px;
         bottom: 0;
         padding-bottom: 0px;
         max-height: 320px;
@@ -403,7 +400,7 @@ h3{
 }
 
 .screen_8{
-    padding: 60px 40px 30px 20px;
+    padding: 60px 20px 30px 20px;
     min-height: 200px;
     background-color: #282828;
     .logo_img{
@@ -420,6 +417,12 @@ h3{
     }
     .download_btns_row{
         justify-content: space-between;
+        .download_in{
+            background-color: #282828;
+        }
+        .download_btn{
+            width: 47.5%;
+        }
     }
 }
 
@@ -491,7 +494,7 @@ footer{
     width: 285px;
     justify-content: center;
     align-items: center;
-    opacity: 0.3;
+    opacity: 0.85;
     /* transition:cubic-bezier(0.895, 0.03, 0.685, 0.22); */
     .slider_item{
         transition: 0.4s ease-out all;
@@ -512,6 +515,9 @@ footer{
     margin-bottom: 60px;
 }
 
+.slick-slider{
+    z-index: 9;
+}
 
 
 .slick-dots{
@@ -926,11 +932,9 @@ li::marker{
         
     }
     .swipe_img{
-        animation: swipedown 2.6s 2 6.5s;
+        animation: swipedown 2.6s 1 6.5s;
         /* animation: swipedown 2.6s infinite 2.6s 1; */
     }
-
-
   }
 
   .photos img{
@@ -988,6 +992,8 @@ li::marker{
 
   .screen_photo{
     margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
   }
 
   .swite_text {
@@ -1023,24 +1029,96 @@ li::marker{
         transform: translate(0px, 0px);
     }
   }
-
   
-  @keyframes swipepadding {
-    0% {
-      padding-top: 21px;
-    }
-    50%{
-        padding-top: 30px;
-    }
-    60%{
-        padding-top: 28px;
-    }
-    50%{
-        padding-top: 32px;
-    }
 
-    100%{
-        padding-top: 20px;
+  .lang{
+    position: relative;
+    .lang_drop{
+        /* display: none; */
+        position: absolute;
+        z-index: 9;
+        background-color: green;
+        padding: 10px;
+        right: 0;
+        top: 35px;
+        border-radius: 8px;
+        background-color: #3E3E41;
+        display: none;
+        .list{
+            padding: 8px 12px 8px 8px;
+            color: #F2F2F2;
+            min-width: 190px;
+            min-height: 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            &.active{
+                background-color: #4D4D52;
+                justify-content: space-between;
+                .sellect_lang{
+                    background-image: url(/img/icons/lang_sellect.svg);
+                    background-size: cover;
+                    width: 15px;
+                    height: 10px;
+                }
+            }
+            .lang_sub{
+                color: #9D9BA1;
+            }
+        }
+      }
+    .lang_butt{
+        background-color: #3E3E41;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #F2F2F2;
+        padding: 6px 12.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        .lang_arrow{
+            background-image: url(/img/icons/arrow_down_lang.svg);
+            background-size: cover;
+            width: 15px;
+            height: 9px;
+            margin-top: 2.5px;
+            margin-left: 7.5px;
+        &.active{
+            background-image: url(/img/icons/arrow_up_lang.svg);
+            margin-top: 0px;
+        }
+        }
     }
-  
   }
+
+  .lang_back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: #000;
+    opacity: 0.4;
+    display: none;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .show{
+    display: block !important;
+  }
+
+  .lents{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 650px;
+  }
+  
