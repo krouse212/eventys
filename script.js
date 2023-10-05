@@ -1,7 +1,5 @@
 
 
-new WOW().init();
-
 let langButton = document.querySelector('.lang'),
     langArrow = langButton.querySelector('.lang_arrow'),
     langDrop = langButton.querySelector('.lang_drop'),

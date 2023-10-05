@@ -5,7 +5,7 @@ $('.center').slick({
     mobileFirst: true,
     autoplay: true,
     variableWidth: true,
-    speed: 450,
+    speed: 350,
     slidesToShow: 3,
     arrows: false,
     dots: true,
